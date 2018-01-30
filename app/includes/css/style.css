@@ -7,7 +7,6 @@
 
 body {
     background: #2aabd2 ;
-    color: #ffffff;
 }
 
 .pd-1 {
@@ -22,15 +21,15 @@ body {
     padding: 10px;
 }
 
-mr-1 {
+.mr-1 {
     margin: 1px;
 }
 
-mr-5 {
+.mr-5 {
     margin: 5px;
 }
 
-mr-10 {
+.mr-10 {
     margin: 10px;
 }
 
@@ -112,4 +111,46 @@ label {
     padding: 15px;
     margin-bottom: 20px;
     background-color: #2e6da4;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px /* was 992 */;
+    padding: 0px;
+    border: 0px solid red;
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.heading_one{
+    color: #ffffff;
+}
+
+.admin_menu a:link{
+    color: #ffffff;
+}
+
+.admin_menu a:hover{
+    color: #f1f1f1f1;
+}
+
+.cust_menu a:link{
+    color: #ffffff;
+}
+
+.cust_menu a:hover{
+    color: #f1f1f1f1;
+}
+
+.logout_menu a:link {
+    color: #ffffff;
+}
+
+.logout_menu a:hover {
+    color: #ff0000;
 }

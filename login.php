@@ -37,7 +37,7 @@ if (isset($_POST['email']) && isset($_POST['password']))
     else
     {
         // redirect to the login page. If the password and username are not present the user shouldn't be able to access anywhere.
-        header ('Location: /website.co.uk/');
+        header ('Location: /');
         exit;
     }
 }

@@ -1,14 +1,20 @@
 {{header}}
-<h3>Customer Area</h3>
 
-<ul>
-    <li><a class="cust_menu" href="customer_profile.php">Profile</a></li>
-    <li><a class="cust_menu" href="customer_my_account.php">My Account</a></li>
-    <li><a class="cust_menu" href="customer_help.php">Help</a></li>
-</ul>
+<div class="container-fluid container">
 
-<a href="../private/includes/logout.php">Log Out</a>
+    <h3 class="heading_one">Customer Area</h3>
 
-<br/><br/>
+    <ul>
+        <li><a class="cust_menu" href="../customer/profile">Profile</a></li>
+        <li><a class="cust_menu" href="../customer/my_account">My Account</a></li>
+        <li><a class="cust_menu" href="../customer/help">Help</a></li>
+    </ul>
+
+    <div class="logout_menu">
+        <a href="../app/includes/php/doLogout.php">Log Out</a>
+    </div>
+
+    <br/><br/>
+</div>
 
 {{footer}}

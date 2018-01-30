@@ -1,15 +1,22 @@
 {{header}}
-<h3>Admin Area</h3>
 
-<ul>
-    <li><a href="admin_profile.php">Profile</a></li>
-    <li><a href="admin_my_account.php">My Account</a></li>
-    <li><a href="customer_reg.php">Customer Register</a></li>
-    <li><a href="admin_help.php">Help</a></li>
-</ul>
+<div class="container-fluid container">
 
-<a href="../app/includes/php/doLogout.php">Log Out</a>
+    <h3 class="heading_one">Admin Area</h3>
+    <ul class="admin_menu">
+        <li><a href="../admin/admin_profile">Profile</a></li>
+        <li><a href="../admin/admin_my_account">My Account</a></li>
+        <li><a href="../admin/customer_register">Customer Register</a></li>
+        <li><a href="../admin/help">Help</a></li>
+    </ul>
 
-<br/><br/>
+    <ul class="logout_menu">
+        <li>
+            <a href="../app/includes/php/doLogout.php">Log Out</a>
+        </li>
+    </ul>
+
+    <br/><br/>
+</div>
 
 {{footer}}

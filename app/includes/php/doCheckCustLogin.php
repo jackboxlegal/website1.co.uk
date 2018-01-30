@@ -14,7 +14,7 @@ if ((isset($_SESSION['customer_logged_in']) && $_SESSION['customer_logged_in'] =
 // else
 else {
     // send to index.php (login page)
-    header("Location: ../index.php");
+    header("Location: /");
     exit;
 }
 
