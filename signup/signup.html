@@ -1,0 +1,170 @@
+{{header}}
+
+    <div class="container">
+        <div class="row center">
+            <!-- one -->
+            <div class="col-md-12 col-sm-12 center">
+                <div class="login_title">
+                    <a href="../index.php"><h1>Website.co.uk <span>Sign up page</span></h1></a>
+                    <i class="fa fa-unlock-alt fa-5x" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- one -->
+            <div class="col-md-6 col-sm-12 left">
+                <div class="signUp_info info_box">
+                    <h3>Thanks for signing up with website.co.uk</h3>
+                    <p>
+                        Fill out the fields below:
+                    </p>
+                </div>
+            </div>
+
+            <!-- two -->
+            <div class="col-md-6 col-sm-12 left ">
+                <form class="form" id="signUpForm" action="../login.php" method="POST">
+                    <div class="form-group">
+                        <label class="left" for="exampleInputFirstName">First Name</label>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon"><i class="fa fa-user-circle-o"></i></div>
+                            <input type="text" class="form-control" name="username" id="exampleInputFirstName" placeholder="First Name" minlength="2" maxlength="30" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="left" for="exampleInputLastName">Last Name</label>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon"><i class="fa fa-user-circle"></i></div>
+                            <input type="text" class="form-control" name="username" id="exampleInputLastName" placeholder="Last Name" minlength="2" maxlength="30" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="left" for="exampleInputEmail1">Email address</label>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+                            <input type="email" class="form-control" name="username" id="exampleInputEmail1" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon"><i class="fa fa-lock"></i></div>
+                            <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password" minlength="2" maxlength="4" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPasswordConfirm">Confirm Password</label>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon"><i class="fa fa-check"></i></div>
+                            <input type="password" class="form-control" name="password" id="exampleInputPasswordConfirm" placeholder="Confirm Password" minlength="2" maxlength="4" required>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" required>
+                            Please agree to our <a href="#">Policy</a>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            Check to sign up to our newsletter
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        $().ready(function() {
+            // validate signup form on keyup and submit
+            $("#signUpForm").validate({
+                    rules: {
+                        firstname: "required",
+                        lastname: "required",
+                        username: {
+                            required: true,
+                            minlength: 2
+                        },
+                        password: {
+                            required: true,
+                            minlength: 5
+                        },
+                        confirm_password: {
+                            required: true,
+                            minlength: 5,
+                            equalTo: "#password"
+                        },
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        topic: {
+                            required: "#newsletter:checked",
+                            minlength: 2
+                        },
+                        agree: "required"
+                    },
+                    messages: {
+                        firstname: "Please enter your firstname",
+                        lastname: "Please enter your lastname",
+                        username: {
+                            required: "Please enter a username",
+                            minlength: "Your username must consist of at least 2 characters"
+                        },
+                        password: {
+                            required: "Please provide a password",
+                            minlength: "Your password must be at least 5 characters long"
+                        },
+                        confirm_password: {
+                            required: "Please provide a password",
+                            minlength: "Your password must be at least 5 characters long",
+                            equalTo: "Please enter the same password as above"
+                        },
+                        email: "Please enter a valid email address",
+                        agree: "Please accept our policy",
+                        topic: "Please select at least 2 topics"
+
+                    },
+                },
+                highlight, function(element) {
+                    var id_attr = "#" + $( element ).attr("id") + "1";
+                    $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+                    $(id_attr).removeClass('glyphicon-ok').addClass('glyphicon-remove');
+
+
+
+
+                },
+                unhighlight, function(element) {
+                    var id_attr = "#" + $( element ).attr("id") + "1";
+                    $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+                    $(id_attr).removeClass('glyphicon-remove').addClass('glyphicon-ok');
+
+
+
+
+                },
+                errorElement, 'span',
+                errorClass, 'help-block',
+                errorPlacement, function(error, element) {
+                    if(element.parent('.input-group').length) {
+                        error.insertAfter(element.parent());
+                    } else {
+                        error.insertAfter(element);
+
+                    }
+
+
+                });
+            });
+    </script>
+
+{{footer}}

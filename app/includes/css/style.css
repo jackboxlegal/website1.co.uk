@@ -1,0 +1,115 @@
+/*
+ *
+ *   Stylesheet
+ *   Website.co.uk
+ *
+ */
+
+body {
+    background: #2aabd2 ;
+    color: #ffffff;
+}
+
+.pd-1 {
+    padding: 1px;
+}
+
+.pd-5 {
+    padding: 5px;
+}
+
+.pd-10 {
+    padding: 10px;
+}
+
+mr-1 {
+    margin: 1px;
+}
+
+mr-5 {
+    margin: 5px;
+}
+
+mr-10 {
+    margin: 10px;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+a:link  {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+
+.login_title h1 {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.login_title span {
+    font-size: 0.7em;
+}
+
+.login_title i{
+    color: #ffffff;
+    padding: 20px;
+}
+
+.forgot_title{
+    color: #ffffff;
+    padding: 20px;
+}
+
+.forgot_info{
+    color: #ffffff;
+    padding-bottom: 20px;
+}
+
+.signUp_info{
+    color: #ffffff;
+}
+
+label {
+    color: #ffffff;
+}
+
+.forgot {
+    color: #ffffff;
+}
+
+.info_box {
+    border: 2px solid #1b6d85;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #2e6da4;
+}
