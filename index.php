@@ -1,7 +1,7 @@
 <?php
 include ("app/includes/php/template.php");
 # load your login template and call it $template
-$template = getTemplate("login.html");
+$template = getTemplate("app/includes/php/doLogin.html");
 # load your header and footer templates also
 # variable named header is equal to the function getTemplate(pointing at filename: private/template/header.html
 $header = getTemplate("app/template/header.html");
